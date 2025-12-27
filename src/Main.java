@@ -95,10 +95,11 @@ public class Main {
         short weightTarget = 7000;
         int progress1 = weightTarget/250;
         int progress2 = weightTarget/500;
+        int averageTime = (progress1 + progress2)/2;
 
         System.out.println ("Достижение цели по весу за " + progress1 + " дней");
         System.out.println ("Достижение цели по весу за " + progress2 + " дней");
-        System.out.println ("В среднем спортсмен сможет достигнуть цели по весу за следующее количество дней: " + ((progress1 + progress2)/2));
+        System.out.println ("В среднем спортсмен сможет достигнуть цели по весу за " + averageTime + " дней: ") ;
 
         System.out.println ("HW3 задача 8");
 
@@ -110,8 +111,20 @@ public class Main {
         int denisnewSalary = denis + ((denis*10)/100);
         int christinanewSalary = christina + ((christina*10)/100);
 
-        System.out.println ("Маша теперь получает " + mashaNewSalary + " рублей, годовой доход вырос на " + (mashaNewSalary-masha) + " рублей " + " и составляет " + (mashaNewSalary*12) + " рублей." );
-        System.out.println ("Денис теперь получает " + denisnewSalary + " рублей, годовой доход вырос на " + (denisnewSalary-denis) + " рублей " + " и составляет " + (denisnewSalary*12) + " рублей." );
-        System.out.println ("Кристина теперь получает " + christinanewSalary + " рублей, годовой доход вырос на " + (christinanewSalary-christina) + " рублей " + " и составляет " + (christinanewSalary*12) + " рублей." );
+        int mashaOldSalaryYear = masha*12;
+        int denisOldSalaryYear = denis*12;
+        int christinaOldSalaryYear = christina*12;
+
+        int mashaNewSalaryYear = mashaNewSalary*12;
+        int denisNewSalaryYear = denisnewSalary*12;
+        int christinaNewSalaryYear = christinanewSalary*12;
+
+        int mashaDiff = mashaNewSalaryYear-mashaOldSalaryYear;
+        int denisDiff = denisNewSalaryYear-denisOldSalaryYear;
+        int christinaDiff= christinaNewSalaryYear-christinaOldSalaryYear;
+
+        System.out.println ("Маша теперь получает " + mashaNewSalary + " рублей, годовой доход вырос на " + mashaDiff + " рублей ");
+        System.out.println ("Денис теперь получает " + denisnewSalary + " рублей, годовой доход вырос на " + denisDiff + " рублей ");
+        System.out.println ("Кристина теперь получает " + christinanewSalary + " рублей, годовой доход вырос на " + christinaDiff + " рублей ");
     }
 }
